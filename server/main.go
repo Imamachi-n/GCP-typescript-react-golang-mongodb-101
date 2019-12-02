@@ -2,14 +2,16 @@ package main
 
 import (
 	"fmt"
-	"server/server/route"
+	"log"
+	"os"
+	"server/route"
 	"time"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
-const PORT = ":9000"
+// PORT := ":9000"
 
 func SetupRouter() *gin.Engine {
 	// Disable Console Color, you don't need console color when writing the logs to file.
@@ -56,5 +58,10 @@ func SetupRouter() *gin.Engine {
 
 func main() {
 	router := SetupRouter()
-	router.Run(PORT) // listen and serve on 0.0.0.0:8080
+	port := ":" + os.Getenv("PORT")
+	if port == ":" {
+		port = ":9000"
+		log.Printf("Defaulting to port %s", port)
+	}
+	router.Run(port) // listen and serve on 0.0.0.0:8080
 }
