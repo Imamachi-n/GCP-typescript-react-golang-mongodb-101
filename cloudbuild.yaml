@@ -5,12 +5,6 @@ steps:
       - "install"
     dir: "client"
 
-  - name: "node:10.15.1"
-    entrypoint: yarn
-    args:
-      - "build"
-    dir: "client"
-
   - name: node:10.15.1
     entrypoint: yarn
     args:
@@ -26,10 +20,10 @@ steps:
       - "REACT_APP_FIREBASE_MEASUREMENT_ID=${_FIREBASE_MEASUREMENT_ID}"
     dir: "client"
 
-  - name: node:10.15.1
+  - name: "node:10.15.1"
     entrypoint: yarn
     args:
-      - "check-env"
+      - "build"
     dir: "client"
 
   - name: "gcr.io/cloud-builders/gcloud"
