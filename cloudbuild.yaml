@@ -1,16 +1,16 @@
 steps:
-  - name: "gcr.io/cloud-builders/go"
+  - name: 'gcr.io/cloud-builders/go'
     args:
-      - "build"
-      - "-o"
-      - "bin/goServer"
+      - 'build'
+      - '-o'
+      - 'bin/goServer'
     env:
-      - "GOPATH=golib"
-    dir: "server"
+      - 'GOPATH=golib'
+    dir: 'server'
 
-  - name: "gcr.io/cloud-builders/gcloud"
-    args: ["app", "deploy", "--project gcp-golang-101"]
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['app', 'deploy', '--project gcp-golang-101']
     env:
-      - "GOPATH=golib"
-    dir: "server"
-    timeout: "600s"
+      - 'GOPATH=golib'
+    dir: 'server'
+    timeout: '600s'
