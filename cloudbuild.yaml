@@ -12,8 +12,9 @@ steps:
     args:
       - "app"
       - "deploy"
-      - "server/app.yaml"
+      - "/app.yaml"
       - "--project gcp-golang-101"
     env:
       - "GOPATH=golib"
+    dir: "server"
     timeout: "600s"
