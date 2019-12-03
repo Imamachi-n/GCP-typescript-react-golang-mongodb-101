@@ -12,7 +12,6 @@ steps:
     args:
       - "app"
       - "deploy"
-      - "/app.yaml"
       - "--project gcp-golang-101"
     env:
       - "GOPATH=golib"
