@@ -9,7 +9,7 @@ import (
 func GetAction(c *gin.Context) {
 	name := c.Param("name")
 	action := c.Param("action")
-	message := name + " is " + action
+	message := name + " is gcp " + action
 	c.String(http.StatusOK, message)
 }
 

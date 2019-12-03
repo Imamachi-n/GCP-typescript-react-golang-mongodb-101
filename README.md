@@ -70,8 +70,15 @@ After that, follow the next step.
 
 [Creating a basic build configuration file](https://cloud.google.com/cloud-build/docs/configuring-builds/create-basic-configuration)
 
+```bash
+Step #2: ERROR: (gcloud.app.deploy) Permissions error fetching application [apps/gcp-react-101]. Please make sure you are using the correct project ID and that you have permission to view applications on the project.
+```
+
 - Go to the Google Cloud Console -> IAM & admin -> IAM.
 - Locate the service account and click the pencil icon.
 - Add the role "App Engine Admin" to the service account.
+- Add **the same member**
+
+![img](./img/GCP-IAM.png)
 
 [gcloud - ERROR: (gcloud.app.deploy) Permissions error fetching application](https://stackoverflow.com/questions/56126481/gcloud-error-gcloud-app-deploy-permissions-error-fetching-application)
