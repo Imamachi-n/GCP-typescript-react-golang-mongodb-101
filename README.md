@@ -1,5 +1,9 @@
 # GCP-typescript-react-golang-mongodb-101
 
+## Architecture
+
+![Arch](./img/Architecture.png)
+
 ## 1. Setup gcloud
 
 At first, install `gcloud` command (Google Cloud SDK) on your local PC.
