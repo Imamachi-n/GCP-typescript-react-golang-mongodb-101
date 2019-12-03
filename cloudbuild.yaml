@@ -15,9 +15,7 @@ steps:
       - "deploy"
       - "--project"
       - "gcp-react-101"
-    env:
-      - "GOPATH=golib"
-    dir: "server"
+    dir: "client"
     timeout: "600s"
 
   - name: "gcr.io/cloud-builders/go"
