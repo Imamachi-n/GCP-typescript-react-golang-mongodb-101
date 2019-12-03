@@ -1,4 +1,25 @@
 steps:
+  - name: "gcr.io/cloud-builders/yarn:node:10.15.1"
+    args:
+      - "install"
+    dir: "client"
+
+  - name: "gcr.io/cloud-builders/yarn:node-10.15.1"
+    args:
+      - "build"
+    dir: "client"
+
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      - "app"
+      - "deploy"
+      - "--project"
+      - "gcp-react-101"
+    env:
+      - "GOPATH=golib"
+    dir: "server"
+    timeout: "600s"
+
   - name: "gcr.io/cloud-builders/go"
     args:
       - "build"
