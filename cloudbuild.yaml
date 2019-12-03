@@ -10,20 +10,12 @@ steps:
 
   - name: "gcr.io/cloud-builders/gcloud"
     args:
-      - "config"
-      - "set"
-      - "project"
+      - "app"
+      - "deploy"
+      - "--project"
       - "gcp-golang-101"
     env:
       - "GOPATH=golib"
-    dir: "server"
-    timeout: "600s"
-
-  - name: "gcr.io/cloud-builders/gcloud"
-    args:
-      - "app"
-      - "deploy"
-    env:
-      - "GOPATH=golib"
+      - "PROJECT_ID"
     dir: "server"
     timeout: "600s"
