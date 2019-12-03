@@ -69,3 +69,9 @@ After that, follow the next step.
 [Running builds on GitHub](https://cloud.google.com/cloud-build/docs/run-builds-on-github)
 
 [Creating a basic build configuration file](https://cloud.google.com/cloud-build/docs/configuring-builds/create-basic-configuration)
+
+- Go to the Google Cloud Console -> IAM & admin -> IAM.
+- Locate the service account and click the pencil icon.
+- Add the role "App Engine Deployer" to the service account.
+
+[gcloud - ERROR: (gcloud.app.deploy) Permissions error fetching application](https://stackoverflow.com/questions/56126481/gcloud-error-gcloud-app-deploy-permissions-error-fetching-application)
