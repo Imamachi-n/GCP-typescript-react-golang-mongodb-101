@@ -16,6 +16,5 @@ steps:
       - "gcp-golang-101"
     env:
       - "GOPATH=golib"
-      - "PROJECT_ID"
     dir: "server"
     timeout: "600s"
