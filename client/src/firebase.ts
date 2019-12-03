@@ -3,7 +3,7 @@ import "firebase/auth";
 require("dotenv").config();
 
 console.log(process.env.REACT_APP_FIREBASE_API_KEY);
-console.log(process.env._test);
+console.log(process.env.NODE_ENV);
 
 // https://firebase.google.com/docs/web/setup?hl=ja
 const config = {
