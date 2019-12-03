@@ -17,4 +17,4 @@ steps:
     env:
       - "GOPATH=golib"
     dir: "server"
-    timeout: "1600s"
+    timeout: "600s"
