@@ -62,7 +62,7 @@ You may need to enable Cloud Build API for this GCP project.
 
 At first, setup a Cloud Build GitHub App that allows you to automatically build your code each time you push a new commit to GitHub.
 
-[Cloud Build GitHub アプリ](https://github.com/marketplace/google-cloud-build)
+[Cloud Build GitHub App](https://github.com/marketplace/google-cloud-build)
 
 After that, follow the next step.
 
@@ -72,6 +72,6 @@ After that, follow the next step.
 
 - Go to the Google Cloud Console -> IAM & admin -> IAM.
 - Locate the service account and click the pencil icon.
-- Add the role "App Engine Deployer" to the service account.
+- Add the role "App Engine Admin" to the service account.
 
 [gcloud - ERROR: (gcloud.app.deploy) Permissions error fetching application](https://stackoverflow.com/questions/56126481/gcloud-error-gcloud-app-deploy-permissions-error-fetching-application)
