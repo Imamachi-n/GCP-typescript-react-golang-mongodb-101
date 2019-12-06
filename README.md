@@ -1,6 +1,6 @@
 # GCP-typescript-react-golang-mongodb-101
 
-## System Architecture
+## Architecture
 
 ![Arch](./img/Architecture.png)
 
